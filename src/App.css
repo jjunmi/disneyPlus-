@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
+/* reset */
+html {font-size: 16px;}
+body {
+    overflow-x: hidden;
+	line-height: 1.5;
+	font-family: "Roboto", Malgungothic, "맑은고딕", Dotum, "돋움", sans-serif;
+	font-weight: 400;
+    background-color: #040714;
+    color: #f9f9f9;
+	letter-spacing: -0.025em;
+	word-break: keep-all;
+	word-wrap: break-word;
 }
+html, body, article, aside, footer, header, nav, section, h1, h2, h3, h4, h5, h6, p, div, blockquote, pre, abbr, a, span, img, em, strong, sub, sup, var, address, button, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, figure, figcaption, audio, video {margin: 0;padding: 0;border: 0;box-sizing: border-box;}
+dl, ol, ul, li {list-style: none;}
+p {line-height: 1.5;}
+a {font-family: "Roboto", Malgungothic, "맑은고딕", Dotum, "돋움", sans-serif;display: block;text-decoration: none;color: #f9f9f9;}
+img {display: block;border: 0;user-select: none;-webkit-user-drag: none;}
+button {display: flex;justify-content: center;align-items: center;font-family: "Roboto", Malgungothic, "맑은고딕", Dotum, "돋움", sans-serif;outline: 0;border: 0;background-color: transparent;}
+button:hover {cursor: pointer;}
+input {border: 0;box-sizing: border-box;}
+input:focus {outline: none;}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media screen and (max-width: 1920px) {
+	html {font-size: 0.052083333333333336vw !important;}
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media screen and (max-width: 1500px){
+	html {font-size: 0.06666666666vw !important;}
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media screen and (max-width: 1280px){
+	html {font-size: 0.078125vw !important;}
 }
-
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 1023px){
+	html {font-size: 0.09775171065493646vw !important;}
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width: 786px){
+	html {font-size: 0.1272264631vw !important;}
 }

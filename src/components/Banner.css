@@ -1,0 +1,88 @@
+.banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 600px;
+    color: #fff;
+    object-fit: contain;
+}
+.banner__contents {
+    margin: 0 40px;
+}
+.banner__title {
+    font-size: 52px;
+    line-height: 1.4;
+    margin-bottom: 23px;
+    font-family: "Pretendard", Malgungothic, "맑은고딕", Dotum, "돋움", sans-serif;
+}
+.banner__description {
+    width: 100%;
+    max-width: 720px;
+    font-size: 20px;
+    line-height: 1.6;
+    font-family: "Pretendard", Malgungothic, "맑은고딕", Dotum, "돋움", sans-serif;
+}
+.banner__button {
+    padding: 13px 33px;
+    margin-bottom: 28px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+.banner__button:hover {
+    color: #000;
+    background-color: rgba(170, 170, 170, 0.9);
+}
+.banner--fadeBottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.61), #111)
+}
+@media screen and (max-width: 1920px) {
+    .banner__title {
+        font-size: 52rem;
+        margin-bottom: 0.6em;
+    }
+    .banner__description {
+        font-size: 20rem;
+    }
+    .banner__button {
+        margin-bottom: 2em;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .banner {
+        height: 448px;
+    }
+    .banner__title {
+        font-size: 38rem;
+    }
+    .banner__description {
+        font-size: 18rem;
+    }
+    .banner--fadeBottom {
+        height: 100px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .banner__contents {
+        margin: 0 30px;
+    }
+    .banner__title {
+        font-size: 32px;
+        margin-bottom: 0.4em;
+    }
+    .banner__description {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    .banner__button {
+        margin-bottom: 1.5em;
+        padding: 10px 32px;
+    }
+    
+}

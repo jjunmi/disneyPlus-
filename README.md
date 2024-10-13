@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# React-disneyplus
+```bash
+    npx create-react-app ./
+    npm install react-router-dom
+    npm install axios --save
+    npm install styled-components
+```
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## themoviedb
+- [themoviedb] (https://www.themoviedb.org/)
+- api_key
+- https://api.themoviedb.org/3/movie/550?api_key=<<api_key>>
+- [themoviedbAPI](https://developer.themoviedb.org/reference/intro/getting-started)
 
-## Available Scripts
+### Get Movie By Latest
+- https://api.themoviedb.org/3/movie/latest?api_key=<<api_key>>&language=en-US
+### Get Movie Detail
+- https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
+- https://developer.themoviedb.org/docs/append-to-response
+### Get Movie Reviews
+- https://api.themoviedb.org/3/movie/{movie_id}/reviews?api_key=<<api_key>>&language=en-US&page=1
+### Get Trending
+- https://api.themoviedb.org/3/movie/latest?api_key=<<api_key>>&language=en-US
+### Get Images
+- https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg
+- https://image.tmdb.org/t/p/w500/wwemzKWzjKYJFfCeiB57q3r4Bcm.png
+- https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg
+- https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.png
 
-In the project directory, you can run:
+## Axios
+- Axios는 브라우저, Node.js를 위한 Promise API를 활용하는 HTTP 비동기 통신 라이브러리입니다.
+- 백엔드와 프론트엔드랑 통신을 쉽게하기 위해 Ajax와 더불어 사용합니다.
+- npm i axios --save
+- axio.get("")
+- axio.post("")
+- api > axios.js
+```javascript
+    import axios from 'axios';
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    const instance = axios.create({
+        baseURL: "https://api.themoviedb.org/3",
+        params: {
+            api_key: "527165adba5e5b0d5981a65060b8b863",
+            language: "ko-KR"
+        }
+    })
+    export default instance;
+```
+- api > request.js
+```javascript
+    const requests = {
+        fetchNowPlaying: "movie/now_playing",
+        fetchTrending: "/trending/all/week",
+        fetchTopRated: "/movie/top_rated",
+        fetchActionMovies: "/discover/movie?with_genres=28",
+        fetchComedyMovies: "/discover/movie?with_genres=35",
+        fetchHorrorMovies: "/discover/movie?with_genres=27",
+        fetchRomanceMovies: "/discover/movie?with_genres=10749",
+        fetchDocumentaries: "/discover/movie?with_genres=99",
+    }
+    export default requests;
+```
+## styled-components
+- npm install --save styled-components
+- [styled-components](https://styled-components.com/)
