@@ -66,7 +66,10 @@ const Header = () => {
 export default Header;
 
 const HeaderWrapper = styled.header`
-  position: ${props => props.$headerBg ? "fixed" : "relative"};
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -20,9 +20,14 @@ const Main = () => {
 export default Main;
 
 const Container = styled.main`
+  position: relative;
   overflow-x: hidden;
   min-height: calc(100vh - 250px);
   padding: 0 calc(3.5vw + 5px);
   padding-bottom: 50px;
+  margin-top: 85px;
   background: url("./images/home-background.png") center center /cover no-repeat fixed;
+  @media screen and (max-width: 1280px) {
+    margin-top: 70px;
+  }
 `;

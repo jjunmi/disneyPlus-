@@ -19,7 +19,7 @@ export default Footer;
 
 const FooterWrap = styled.footer`
     position: relative;
-    top: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
